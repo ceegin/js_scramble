@@ -13,7 +13,7 @@
                          "unicorn", "pineapple", "hamper", "moist", "socks", "frumpy"];
         var SCRAMBLED = ["oogreb", "papel", "backrhight", "goman", "yponth", "belat",
                          "icunron", "eppailnpe", "rhmpea", "tmios", "csoks", "rpfuym"];
-
+    
         var playing = true;
 
         while (playing) {
@@ -27,6 +27,10 @@
 
             // Prompt the user to guess the original word when given the scrambled word.
             var guess = prompt("Unscramble this word: " + scrambledWORD);
+            var guess = guess.toLowerCase();
+            var guess = guess.trim();
+
+
             // If the user guesses wrong, tell them they were wrong and show the right word.
             while (guess !== randomWORD) {
                     guess = prompt("WRONG. Guess again!");
